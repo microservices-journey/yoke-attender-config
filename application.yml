@@ -1,4 +1,20 @@
 spring:
+  cloud:
+    stream:
+      bindings:
+        addEventAttender:
+          destination: yoke-add-event-attender          
+          producer:
+            partition-count: 3
+        deleteEventAttender:
+          destination: yoke-delete-event-attender
+          producer:
+            partition-count: 3
+
+      kafka:
+        binder:
+          brokers: localhost:9092
+          autoAddPartitions: true
   jpa:
     database: POSTGRESQL
     show-sql: true
