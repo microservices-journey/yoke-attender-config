@@ -3,7 +3,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: yoke-kafka:29092
+          brokers: yoke-kafka:9092
   datasource:
     url: jdbc:postgresql://yoke-postgres:5432/postgres
 
