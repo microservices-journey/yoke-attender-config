@@ -6,4 +6,13 @@ spring:
           brokers: yoke-kafka:29092
   datasource:
     url: jdbc:postgresql://yoke-postgres:5432/postgres
+  zipkin:
+    baseUrl: http://yoke-zipkin:9411
+    sender:
+      type: kafka
+
+logback:
+  destination:
+    url: logstash
+    port: 5000
 
